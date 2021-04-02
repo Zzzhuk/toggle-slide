@@ -4,6 +4,9 @@ toggleSlide(el, fn) {
       if (typeof el === 'string') {
         item = document.querySelector(el);
       }
+      
+      item.style.overflow = 'hidden';
+      item.style.transition = 'all .2s ease';
 
       if (!item.classList.contains('active')) {
         item.classList.add('active');
